@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functions-II.</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <img src="./logo/Logo.png" alt="Logo" class="logo" />
+    <img src="./logo/header.png" alt="Header" class="header-image" />
+  </header>
+
+  <div class="container mt-5">
+    <h1 class="text-center">Functions-II</h1>
+    <p class="text-center">Click on each topic to learn more.</p>
+
+    <div class="row">
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#functionsModal">
+                BASICS OF FUNCTIONS
+            </button>
+        </div>
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#defaultParametersModal">
+                Default Parameters
+            </button>
+        </div>
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#positionalParametersModal">
+                POSITIONAL PARAMETERS AND ARGUMENTS
+            </button>
+        </div>
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#keywordArgumentsModal">
+                KEYWORD ARGUMENTS
+            </button>
+        </div>
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#arbitraryArgumentsModal">
+                ARBITRARY ARGUMENTS
+            </button>
+        </div>
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#arbitraryKeywordArgumentsModal">
+                Arbitrary Keyword Arguments
+            </button>
+        </div>
+        <div>
+            <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#rulesForMultipleArgumentsModal">
+                RULES FOR USING MULTIPLE TYPES OF ARGUMENTS
+            </button>
+        </div>
+        
+    </div>
+    
+  
+
+
+    <!-- Modals -->
+
+    <div class="modal fade" id="functionsModal" tabindex="-1" aria-labelledby="functionsLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="functionsLabel">BASIC OF FUNCTIONS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.5rem;">
+                                Before we jump into today’s topic, let’s take a moment to refresh our memory on the key concepts we’ve learned about functions, parameters, and arguments.
+                            </p>
+                            <p style="font-size: 1.5rem;">
+                                <b>Function:</b><br>
+                                It’s a set of instructions that performs a specific task. You can call a function multiple times to avoid writing the same code over and over again.<br><BR>
+                                For example, <code>color_my_drawing()</code> is a function.
+                                <br><img src="./images/1.png" alt="" width="30%"><br>
+                            </p>
+                            <p style="font-size: 1.5rem;">
+                                <b>Parameters:</b><br>
+                                Parameters are the values we define while creating a function. Think of parameters as placeholders that the function uses to perform its task.<br><br>
+                                In the example, <code>color</code> is the parameter.
+                                <br><img src="./images/2.png" alt="" width="30%"><br>
+                            </p>
+                            <p style="font-size: 1.5rem;">
+                                <b>Arguments:</b><br>
+                                Arguments are the actual values that we pass into the function when we call it.<br><br>
+                                For example, <code>'red'</code> is the argument we pass into the <code>color_my_drawing()</code> function.
+                                <br><img src="./images/3.png" alt="" width="40%"><br>
+                            </p>
+                            <p style="font-size: 1.5rem;">
+                                Now that we’ve refreshed our understanding of functions, parameters, and arguments, let’s dive into default parameters.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="modal fade" id="positionalParametersModal" tabindex="-1" aria-labelledby="functionsLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="functionsLabel">POSITIONAL PARAMETERS AND ARGUMENTS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.6rem;">
+                                In Python, when we pass arguments to a function, we usually follow the order of the parameters as they appear in the function definition. Such kinds of parameters are called <b>positional parameters</b>.
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                Let’s create a function with students’ details like their name, grade, and roll number as parameters and print it.<br>
+                                In this example, <code>name</code>, <code>grade</code>, and <code>roll_no</code> are <b>positional parameters</b>.
+                                <br><img src="./images/11.png" alt="" width="40%"><br>
+                                <br><img src="./images/12.png" alt="" width="40%"><br>
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                The arguments where the order is important are called <b>positional arguments</b>.<br>
+                                In this example, <code>‘Jasmine’</code>, <code>8</code>, and <code>15</code> are <b>positional arguments</b>.
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                But sometimes, the order can get mixed up, leading to incorrect results. Let’s take a look at an example where this happens:
+                                <br><img src="./images/13.png" alt="" width="40%"><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="modal fade" id="defaultParametersModal" tabindex="-1" aria-labelledby="defaultParametersLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="defaultParametersLabel">Default Parameters</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.5rem;">
+                                
+                                In Python, we can even have functions with parameters that have <b>default values</b>. If no argument is passed, the parameter uses the <b>default value</b>. <br><br>
+                                Let's see how we can give default parameters: <br>
+                                <br><img src="./images/4.png" alt="" width="50%"><br>
+                                Here, in this function ‘red’ is the default value of parameter color. <br><br>
+                                
+                       <span style="color: rgb(227, 148, 2);">  Scenario 1: Not passing any argument to the function <br></span>  
+                       <BR>In this case, the parameter will use the default value because no argument is provided.
+                                <img class="modal-img" src="./images/5.png" alt="sc" style="width: 100%; max-width: 600px" />  <br> <br>
+                                <span style="color: rgb(227, 148, 2);">  Scenario 2: Passing an argument to the function </span> <br>
+                                When we pass an argument, it will overwrite the default value for that specific call. <br><br>
+                                <img class="modal-img" src="./images/6.png" alt="sc" style="width: 100%; max-width: 600px" /> <br>
+                                <img class="modal-img" src="./images/7.png" alt="sc" style="width: 100%; max-width: 600px" />
+<br><br>
+      
+                                If a function has parameters with default values, you can choose to <b>skip those arguments</b> when calling the function. This makes the function calls <b>simpler and cleaner</b>. <br>
+                                <br>For example, if the last name is not provided, the function will still work without throwing any errors.
+                                <img class="modal-img" src="./images/8.png" alt="sc" style="width: 100%; max-width: 700px" /> <br>
+                                <img class="modal-img" src="./images/9.png" alt="sc" style="width: 100%; max-width: 500px" /> <br>
+                                <img class="modal-img" src="./images/10.png" alt="sc" style="width: 100%; max-width: 500px" />
+                                <br>
+                                Now that we’ve seen how default parameters work, let’s talk about <b>positional parameters</b> and <b>arguments</b>. <br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="modal fade" id="keywordArgumentsModal" tabindex="-1" aria-labelledby="keywordArgumentsLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="keywordArgumentsLabel">KEYWORD ARGUMENTS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.6rem;">
+                                If you don’t want to worry about order you can use <b>keyword arguments</b>.
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                Imagine we have a function that prints a student's details, including their name, grade, and roll number. When we call the function, we can pass the arguments in any order, as long as we specify which value goes with which parameter. <br>Here’s how we can do it:
+                                <br><img src="./images/14.png" alt="" width="40%"><br>
+                                <br><img src="./images/15.png" alt="" width="50%"><br>
+                            </p>
+                            
+                            <p style="font-size: 1.6rem;">
+                                Even though the order of the arguments is not correct, by using keyword arguments, we specify which value should be assigned to which parameter.
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                In this case, we pass the arguments in the format <b>key=value</b>. This makes the code much more readable and flexible, as it doesn’t matter in which order the arguments are passed.
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                Now that we've seen how keyword arguments let us specify the exact values for parameters, regardless of their position, let's move on to a situation where we may not even know the exact number of arguments a function will need.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="modal fade" id="arbitraryArgumentsModal" tabindex="-1" aria-labelledby="arbitraryArgumentsLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="arbitraryArgumentsLabel">ARBITRARY ARGUMENTS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.6rem;">
+                                This brings us to <b>arbitrary arguments.</b>
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                When you're unsure about the number of arguments your function might receive, you can handle that gracefully by using an asterisk (*) before the parameter name. This allows the function to accept any number of arguments!
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                Let’s look at a simple example where we don’t know how many colors we’ll be passing to the function. We use the * symbol to allow the function to accept any number of arguments.
+                            </p>
+                            <br><img src="./images/16.png" alt="" width="40%"><br><br>
+                            <p style="font-size: 1.6rem;">
+                                In this case, the function <code>print_colors()</code> accepts any number of arguments, which are all stored as a tuple in the <code>colors</code> parameter. You can pass as many colors as you want, and the function will print them all!
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                You can use the <code>len()</code> function to find out how many arguments were passed. Since the arguments are stored as a tuple, you can also access the values using indexing.
+                                <br><img src="./images/17.png" alt="" width="60%"><br>
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                In Python documentation, you will find <code>*args</code> as a short form for arbitrary arguments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="arbitraryKeywordArgumentsModal" tabindex="-1" aria-labelledby="arbitraryKeywordArgumentsLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="arbitraryKeywordArgumentsLabel">ARBITRARY KEYWORD ARGUMENTS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.6rem;">
+                                Let’s say you are not sure about how many keyword arguments you will pass, you can use arbitrary keyword arguments. To use it, you can precede the argument name with <code>**</code>.
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                Let’s take a look at this example:
+                                <br><img src="./images/18.png" alt="" width="55%"><br><br>
+                            </p>
+                            
+                            <p style="font-size: 1.6rem;">
+                                In this example, the function <code>phone_specifications()</code> accepts any number of keyword arguments, such as camera, speaker, ram, etc. <br><br>These arguments are stored in a dictionary named <code>features</code>.
+                            </p><br>
+                            <p style="font-size: 1.6rem;">
+                                As you can see, the arguments are stored in a dictionary where the keys are the argument names—<code>camera</code>, <code>speaker</code>, <code>ram</code>—and the values are their corresponding values, such as <code>'12 mp'</code>, <code>'3 W'</code>, <code>'8GB'</code>.
+                            </p>
+                            <p style="font-size: 1.6rem;">
+                                To access values, you can mention the name of the key like so:
+                                <br><img src="./images/19.png" alt="" width="55%"><br><br>
+                            </p>
+                            
+                            <p style="font-size: 1.6rem;">
+                                In Python documentation, you will find <code>**kwargs</code> as a short form for arbitrary keyword arguments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="rulesForMultipleArgumentsModal" tabindex="-1" aria-labelledby="rulesForMultipleArgumentsLabel" aria-hidden="true">
+        <div class="modal-dialog custom-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rulesForMultipleArgumentsLabel">RULES FOR USING MULTIPLE TYPES OF ARGUMENTS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-container">
+                        <div class="text-content">
+                            <p style="font-size: 1.6rem;">
+                                When you are using a combination of different types of arguments in a function, you need to follow the following order:
+                            </p>
+                            <ul style="font-size: 1.6rem;">
+                                <li style="font-size: 1.6rem;">Positional Parameters (param1, param2, ...)</li>
+                                <li style="font-size: 1.6rem;">Default Parameters (param=default_value)</li>
+                                <li style="font-size: 1.6rem;">Arbitrary Arguments (*args)</li>
+                                <li style="font-size: 1.6rem;">Arbitrary Keyword Arguments (**kwargs)</li>
+                            </ul>
+                            <p style="font-size: 1.6rem;">
+                                Let’s have a look at this example that has different types of arguments.
+                                <br><img src="./images/20.png" alt="" width="70%"><br><br>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
